@@ -65,7 +65,7 @@ nav .hamburger span {
 
 /* Navbar Logo Animation */
 
-/* .logo {
+.logo {
     animation: fly 3s infinite;
 }
 
@@ -75,7 +75,7 @@ nav .hamburger span {
     50% { transform: translateY(10px); }
     75% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
-} */
+}
 
 
 /* Navbar Icon Hover Animation */
