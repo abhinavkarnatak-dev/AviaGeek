@@ -77,7 +77,9 @@ nav .hamburger span {
     100% { transform: translateY(0); }
 }
 
-
+.logo > img {
+    height: 60px;
+}
 /* Navbar Icon Hover Animation */
 
 .link {
@@ -178,7 +180,11 @@ nav .hamburger span {
 
 /* CSS For Small Screen Size */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    .logo > img {
+        height: 35px;
+    }
+
     nav .menu {
         width: 100%;
         overflow: hidden;
