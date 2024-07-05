@@ -22,17 +22,66 @@
                 </label>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" class="link">Home</a></li>
+                        <li><a href="index.html" class="link">Home</a></li>
                         <li><a href="#" class="link">Airbus</a></li>
                         <li><a href="#" class="link">ATR</a></li>
-                        <li><a href="#" class="link">Boeing</a></li>
-                        <li><a href="#" class="link">Quiz</a></li>
+                        <li><a href="boeing.html" class="link">Boeing</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
-<br>
+    <div class="first-section">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="Images/Home/bg-video.mp4" type="video/mp4">
+        </video>
+        <p class="intro">Welcome to <q>AviaGeek</q>
+            <br>
+            Your Aircraft Model <span class="auto-type"></span></p>
+        <p class="para">AviaGeek is your ultimate destination for in-depth information on a wide range of aircraft models. Whether you're an aviation enthusiast, a student of aeronautics, or simply curious about the world of airplanes, you'll find everything you need right here.</p>
+        <p class="para">Explore our comprehensive database of aircraft models, meticulously categorized for easy navigation. From the legendary Airbus series to the iconic Boeing lineup, each model page features detailed specifications, technical data, and stunning visuals to help you understand and appreciate these marvels of engineering.</p>
+        <q class="quote">Join us on a journey through the fascinating world of aircraft models and experience the thrill of flight from the comfort of your screen.</q>
+    </div>
+
+    <!-- Body Cards -->
+     <section>
+        <div class="container-1">
+            <p class="company-heading">Top Aircraft Manufacturers</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="image">
+                        <img src="Images/Home/Airbus-Logo.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Discover Airbus, a global leader in innovative aircraft design and manufacturing.</p>
+                        <br>
+                        <a href="airbus.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="Images/Home/Boeing-Logo.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Explore Boeing, a pioneering aerospace company renowned for its iconic airplanes.</p>
+                        <br>
+                        <a href="boeing.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="Images/Home/ATR-Logo.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Learn about ATR, a top manufacturer specializing in efficient regional aircraft..</p>
+                        <br>
+                        <a href="atr.html" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
     <!-- Footer Section -->
      <section>
         <div class="container">
@@ -48,5 +97,15 @@
             </footer>
           </div>
      </section>
+
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+        var typed = new Typed(".auto-type", {
+            strings : ["Encyclopedia", "Guide", "Resource", "Compendium"],
+            typeSpeed : 150,
+            backSpeed : 150,
+            loop : true
+        })
+     </script>
 </body>
 </html>

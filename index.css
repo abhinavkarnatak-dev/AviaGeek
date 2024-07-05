@@ -66,7 +66,7 @@ nav .hamburger span {
 /* Navbar Logo Animation */
 
 .logo {
-    animation: fly 3s infinite;
+    animation: fly 5s infinite;
 }
 
 @keyframes fly {
@@ -80,6 +80,8 @@ nav .hamburger span {
 .logo > img {
     height: 60px;
 }
+
+
 /* Navbar Icon Hover Animation */
 
 .link {
@@ -110,6 +112,196 @@ nav .hamburger span {
     transform: scaleX(1);
 }
 
+
+/* Body CSS */
+
+.background-clip {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.first-section {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 74px;
+}
+
+.first-section > p {
+    padding-top: 50px;
+}
+
+.intro {
+    color: #08D9D6;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: 3px 3px 10px black;
+}
+
+q {
+    color: #EEEEEE;
+}
+
+.para{
+    color: #EEEEEE;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.quote {
+    color: #EEEEEE;
+    font-size: 20px;
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: center;
+    padding-top: 78px;
+    
+
+}
+
+.auto-type {
+    color: yellow;
+}
+
+.typed-cursor {
+    color: yellow;
+}
+
+.company-heading {
+    color: white;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Body Cards CSS */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: inherit;
+    justify-content: space-evenly;
+    place-items: center;
+    padding-bottom: 30px;
+}
+
+.card {
+    width: 26vw;
+    aspect-ratio: 1 / 0.3;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px white;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+}
+  
+.card:hover img {
+    filter: blur(10px) brightness(1);
+}
+
+.card:hover::after {
+    opacity: 1;
+    inset: 10px;
+}
+  
+.content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.content p {
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+    z-index: 1;
+}
+.content p {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+    z-index: 1;
+}
+.card:hover .content P {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+}
+  
+.content a {
+    margin-top: -10px;
+    opacity: 0;
+    transition: 0.4s 0.2s ease;
+    z-index: 1;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 8.5vw;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.content a {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: #d1d1d1;
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.card:hover .content a {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.content a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+    
 
 /* Footer CSS */
 
@@ -243,5 +435,124 @@ nav .hamburger span {
 
     .icon:hover > i {
         transform: scale(1.3);
+    }
+
+    .cards {
+        flex-direction: column;
+        flex-grow: inherit;
+        gap: 50px;
+    }
+
+    .first-section > p {
+        padding-top: 20px;
+    }
+
+    .intro {
+        font-size: 5.5vw;
+        text-align: center;
+    }
+
+    .para {
+        font-size: 18px;
+        margin: 35.14px;
+    }
+
+    .quote {
+        font-size: 16px;
+        padding-top: 0px;
+        /* margin: 40px; */
+    }
+
+    .company-heading {
+        font-size: 5vw;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 4vw;
+    }
+
+    .content a {
+        font-size: 4vw;
+        width: auto;
+    }
+
+    .card .image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px white;
+        object-fit: cover;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid white;
+        border-radius: inherit;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        background: linear-gradient(50deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .card:hover img {
+        filter: blur(10px) brightness(1);
+    }
+
+    .card:hover::after {
+        opacity: 1;
+        inset: 10px;
+    }
+
+    .card .content p {
+        font-size: 2.5vw;
+        opacity: 0;
+        transition: 0.4s 0.2s ease;
+        z-index: 1;
+        transform: translateY(50%);
+    }
+
+    .card:hover .content p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card .content a {
+        font-size: 2.5vw;
+        opacity: 0;
+        transition: 0.4s 0.2s ease;
+        z-index: 1;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 1%;
+        padding-right: 1%;
+        width: auto;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .card:hover .content a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card .content a:hover {
+        background-color: white;
+        color: black;
+        transition: 0.2s ease-in-out;
     }
 }
