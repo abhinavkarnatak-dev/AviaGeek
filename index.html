@@ -120,7 +120,11 @@
         })
      </script>
      <script>
-        alert("This website is under development and not yet completed.")
+        window.onload = function() {
+            setTimeout(function() {
+                alert("This website is under development and not yet completed.");
+            }, 2500);
+        };
      </script>
 
      <!-- Home Page Footer Section -->
