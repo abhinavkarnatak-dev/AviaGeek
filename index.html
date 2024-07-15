@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,102 +8,109 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
+
 <body>
-    
-    <!-- Navbar Section -->
+
+    <!-- Home Page Front Section -->
     <section>
-        <div class="wrapper">
-            <nav>
-                <a href="index.html" class="logo"><img src="./Logo.png" alt="logo"></a>
-                <input type="checkbox" id="toggle">
-                <label for="toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
+        <div class="front-section">
+            <div class="navbar">
+                <a href="index.html" class="logo"><img src="./Images/AviaGeek-Logo.png" alt="logo"></a>
                 <div class="menu">
                     <ul>
                         <li><a href="index.html" class="link">Home</a></li>
-                        <li><a href="#" class="link">Airbus</a></li>
-                        <li><a href="#" class="link">ATR</a></li>
+                        <li><a href="airbus.html" class="link">Airbus</a></li>
+                        <li><a href="atr.html" class="link">ATR</a></li>
                         <li><a href="boeing.html" class="link">Boeing</a></li>
                     </ul>
                 </div>
-            </nav>
+            </div>
+            <div class="pattern"></div>
+            <div class="bg-img"></div>
+            <div class="animate-icon-01">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.094" height="21.094" viewBox="0 0 21.094 21.094">
+                    <g data-name="Group1" opacity="0.505">
+                        <rect data-name="Rectangle1" width="26" height="3" transform="translate(2.207 0) rotate(45)" fill="#f8b65d"></rect>
+                        <rect data-name="Rectangle2" width="26" height="3" transform="translate(21.093 2.207) rotate(135)" fill="#f8b65d"></rect>
+                    </g>
+                </svg>
+            </div>
+            <div class="animate-icon-02">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.094" height="21.094" viewBox="0 0 21.094 21.094">
+                    <g data-name="Group1" opacity="0.50">
+                        <rect data-name="Rectangle3" width="26" height="3" transform="translate(2.207 0) rotate(45)" fill="#f8b65d"></rect>
+                        <rect data-name="Rectangle4" width="26" height="3" transform="translate(21.093 2.207) rotate(135)" fill="#f8b65d"></rect>
+                    </g>
+                </svg>
+            </div>
+            <div class="animate-icon-03">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21.094" height="21.094" viewBox="0 0 21.094 21.094">
+                    <g data-name="Group1" opacity="0.50">
+                        <rect data-name="Rectangle5" width="26" height="3" transform="translate(2.207 0) rotate(45)" fill="#f8b65d"></rect>
+                        <rect data-name="Rectangle6" width="26" height="3" transform="translate(21.093 2.207) rotate(135)" fill="#f8b65d"></rect>
+                    </g>
+                </svg>
+            </div>
+            <div class="content">
+                <div class="intro">
+                    <p>Welcome to <span><q>AviaGeek</q></span>
+                        <br>
+                        Your Aircraft Model <span class="auto-type"></span>
+                    </p>
+                    <p class="para">
+                        AviaGeek is your ultimate destination for in-depth information on a wide range of aircraft models.
+                    </p>
+                    <button class="read-more" onclick="document.getElementById('cards').scrollIntoView({behavior: 'smooth'});">Read More</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Front Section -->
-    <section>
-        <div class="first-section">
-            <video autoplay loop muted class="background-clip">
-                <source src="Images/Home/bg-video.mp4" type="video/mp4">
-            </video>
-            <p class="intro">Welcome to <q>AviaGeek</q>
-                <br>
-                Your Aircraft Model <span class="auto-type"></span></p>
-            <p class="para">AviaGeek is your ultimate destination for in-depth information on a wide range of aircraft models. Whether you're an aviation enthusiast, a student of aeronautics, or simply curious about the world of airplanes, you'll find everything you need right here.</p>
-            <p class="para">Explore our comprehensive database of aircraft models, meticulously categorized for easy navigation. From the legendary Airbus series to the iconic Boeing lineup, each model page features detailed specifications, technical data, and stunning visuals to help you understand and appreciate these marvels of engineering.</p>
-            <q class="quote">Join us on a journey through the fascinating world of aircraft models and experience the thrill of flight from the comfort of your screen.</q>
-        </div>
-    </section>
-
-    <!-- Body Cards -->
-     <section>
-        <div class="container-1">
-            <p class="company-heading">Top Aircraft Manufacturers</p>
-            <div class="cards">
-                <div class="card">
-                    <div class="image">
-                        <img src="Images/Home/Airbus-Logo.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <p>Discover Airbus, a global leader in innovative aircraft design and manufacturing.</p>
-                        <br>
-                        <a href="airbus.html" class="btn">Read More</a>
-                    </div>
+    <!-- Home Page Cards Section -->
+     <section id="cards">
+        <br>
+        <p class="brands">Top Aircraft Manufacturers</p>
+        <div class="container">
+            <div class="card card1">
+                <div class="image-container">
+                    <img src="/Images/Home/Airbus-Logo.png" alt="">
                 </div>
-                <div class="card">
-                    <div class="image">
-                        <img src="Images/Home/Boeing-Logo.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <p>Explore Boeing, a pioneering aerospace company renowned for its iconic airplanes.</p>
-                        <br>
-                        <a href="boeing.html" class="btn">Read More</a>
-                    </div>
+                <div>
+                    <p class="title">Airbus</p>
+                    <p class="description">
+                        A global leader in innovative aircraft design and manufacturing ...
+                    </p>
+                    <button class="learn-more" onclick="window.location.href='airbus.html';" type="button"><span class="button-text">Learn More</span></button>
                 </div>
-                <div class="card">
-                    <div class="image">
-                        <img src="Images/Home/ATR-Logo.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <p>Learn about ATR, a top manufacturer specializing in efficient regional aircraft..</p>
-                        <br>
-                        <a href="atr.html" class="btn">Read More</a>
-                    </div>
+            </div>
+            <div class="card card2">
+                <div class="image-container">
+                    <img src="/Images/Home/ATR-Logo.png" alt="">
+                </div>
+                <div>
+                    <p class="title">ATR</p>
+                    <p class="description">
+                        A top manufacturer specializing in efficient regional aircraft ...
+                    </p>
+                    <button class="learn-more" onclick="window.location.href='atr.html';" type="button"><span class="button-text">Learn More</span></button>
+                </div>
+            </div>
+            <div class="card card3">
+                <div class="image-container">
+                    <img src="/Images/Home/Boeing-Logo.png" alt="">
+                </div>
+                <div>
+                    <p class="title">Boeing</p>
+                    <p class="description">
+                        A pioneering aerospace company renowned for its iconic airplanes ...
+                    </p>
+                    <button class="learn-more" onclick="window.location.href='boeing.html';" type="button"><span class="button-text">Learn More</span></button>
                 </div>
             </div>
         </div>
      </section>
 
-    <!-- Footer Section -->
-     <section>
-        <div class="container">
-            <footer>
-              <div class="foot-class">
-                <p class="footer-text">© 2024 AviaGeek</p>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/abhinav-karnatak-9a7667206/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://x.com/AbhinavKar941" class="icon"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://github.com/abhinavkarnatak-dev" class="icon"><i class="fa-brands fa-github"></i></a>
-                </div>
-              </div>
-            </footer>
-          </div>
-     </section>
-
-     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
      <script>
         var typed = new Typed(".auto-type", {
             strings : ["Encyclopedia", "Guide", "Resource", "Compendium"],
@@ -111,5 +119,19 @@
             loop : true
         })
      </script>
+
+     <!-- Home Page Footer Section -->
+    <section>
+        <footer>
+            <div class="foot-class">
+            <p class="footer-text">© 2024 AviaGeek</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/abhinav-karnatak-9a7667206/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/AbhinavKar941" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/abhinavkarnatak-dev" class="icon"><i class="fa-brands fa-github"></i></a>
+            </div>
+            </div>
+        </footer>
+     </section>
 </body>
 </html>
