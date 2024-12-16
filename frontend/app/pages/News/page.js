@@ -13,7 +13,7 @@ const NewsPage = () => {
     try {
       const query = `aviation OR aircraft OR airlines`;
 
-      const apiKey = "cd7b47f66ee5452d9c80a024110d8af6";
+      const apiKey = process.env.NEWSAPI_KEY;
 
       const response = await fetch(
         `https://newsapi.org/v2/everything?q=${encodeURIComponent(
@@ -21,6 +21,7 @@ const NewsPage = () => {
         )}&apiKey=${apiKey}`
       );
       const data = await response.json();
+      console.log(data);
 
       if (data.articles) {
         setNews((prevNews) => {
