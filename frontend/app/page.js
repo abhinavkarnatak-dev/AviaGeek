@@ -36,7 +36,7 @@ const Page = () => {
               Your Aircraft Model{" "}
               <span className="text-[#DCBB87]">
                 <ReactTyped
-                  strings={["Encyclopedia", "Guide", "Resource", "Compendium"]}
+                  strings={["Guide", "Details", "Insights", "Resource" ]}
                   typeSpeed={150}
                   backSpeed={150}
                   loop={true}
