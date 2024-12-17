@@ -3,16 +3,16 @@ import Button from "../Button";
 
 const ManufacturerCard = (props) => {
   return (
-    <div className="border-2 border-[#FFF] w-[340px] h-[400px] rounded-xl flex-col justify-center overflow-hidden bg-[#19232D] hover:bg-[#121A22]">
+    <div className="border-2 border-[#FFF] w-[240px] h-[340px] lg:w-[340px] lg:h-[400px] rounded-lg lg:rounded-xl flex-col justify-center overflow-hidden bg-[#19232D] hover:bg-[#19232D] lg:hover:bg-[#121A22]">
       <img
         src={`./images/${props.name}.png`}
-        className="w-44 mx-auto pt-4 pb-4"
+        className="w-28 lg:w-44 mx-auto pt-4 pb-4"
       />
       <div className="bg-[#FFF] w-full h-52 pl-4 pr-8">
-        <h2 className="text-[#19232D] text-xl font-bold pt-4 text-nowrap">
+        <h2 className="text-[#19232D] text-lg lg:text-xl font-bold pt-4 text-nowrap">
           {props.title}
         </h2>
-        <p className="text-[#19232D] text-md font-medium mt-2 text-justify mb-6">
+        <p className="text-[#19232D] text-sm lg:text-base font-medium mt-2 text-justify mb-6">
           {props.desc}
         </p>
         <Button text="Learn More" buttonroute={props.pageroute} />

@@ -47,7 +47,7 @@ const Button = (props) => {
         <motion.button
           whileTap={{ scale: 0.985 }}
           ref={btnRef}
-          className="relative w-5/12 h-10 overflow-hidden rounded-lg bg-[#19232D] px-4 py-2 text-sm font-medium text-[#FFF] border-2 border-[#19232D]"
+          className="relative w-6/12 h-10 lg:w-5/12 lg:h-10 overflow-hidden rounded-md lg:rounded-lg bg-[#19232D] px-4 py-2 text-xs lg:text-sm font-medium text-[#FFF] border-2 border-[#19232D] text-nowrap"
         >
           <span className="pointer-events-none relative z-10 mix-blend-difference">
             {props.text}

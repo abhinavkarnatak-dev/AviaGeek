@@ -72,18 +72,18 @@ const NewsPage = () => {
       <Navbar hasBorder={true} isTransparent={false}/>
         <div className="mt-8">
           <h1
-            className="text-[#FFF] text-center text-3xl font-sans font-bold"
+            className="text-[#FFF] text-center text-2xl lg:text-3xl font-sans font-bold"
             style={{ textShadow: "3px 3px 10px black" }}
           >
             Aviation News
           </h1>
           <div className="mt-8 px-4 pb-8">
             {isLoading ? (
-              <p className="text-center text-[#DCBB87] text-lg font-sans">
+              <p className="text-center text-[#DCBB87] text-md lg:text-lg font-sans">
                 Loading news...
               </p>
             ) : news.length === 0 ? (
-              <p className="text-center text-[#DCBB87] text-lg font-sans">
+              <p className="text-center text-[#DCBB87] text-md lg:text-lg font-sans">
                 No news found for aviation.
               </p>
             ) : (

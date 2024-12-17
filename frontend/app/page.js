@@ -6,25 +6,6 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Page = () => {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   const isLoggedIn = localStorage.getItem("isLoggedIn");
-  //   if (!isLoggedIn) {
-  //     router.push("/pages/Login");
-  //   } else {
-  //     setIsLoading(false);
-  //   }
-  // }, [router]);
-
-  // if (isLoading) {
-  //   return (
-  //     <div className="flex justify-center items-center h-screen bg-[#19232D]">
-  //       <p className="text-[#DCBB87] text-xl font-semibold">Loading...</p>
-  //     </div>
-  //   );
-  // }
   const handleScroll = () => {
     const element = document.getElementById("section-two");
     if (element) {
@@ -39,17 +20,17 @@ const Page = () => {
           className="h-screen w-full bg-cover bg-center relative bg-[#19232D] border-b-2 border-[#FFF]"
           style={{ backgroundImage: "url('/images/front-pattern.png')" }}
         >
-          <Navbar hasBorder={false} isTransparent={true}/>
+          <Navbar hasBorder={false} isTransparent={true} />
 
-          <div className="pt-32">
+          <div className="pt-24 lg:pt-32">
             <h1
-              className="text-[#FFF] text-[40px] font-sans font-bold pl-24"
+              className="text-[#FFF] text-2xl lg:text-[40px] font-sans font-bold ml-0 lg:ml-24 text-center lg:text-start"
               style={{ textShadow: "3px 3px 10px black" }}
             >
               Welcome to <span className="text-[#DCBB87]">"AviaGeek"</span>
             </h1>
             <h1
-              className="text-[#FFF] text-[40px] font-sans font-bold ml-24"
+              className="text-[#FFF] text-xl lg:text-[40px] mt-0 lg:mt-8 ml-0 lg:ml-24 font-sans font-bold text-center lg:text-start"
               style={{ textShadow: "3px 3px 10px black" }}
             >
               Your Aircraft Model{" "}
@@ -64,22 +45,24 @@ const Page = () => {
               </span>
             </h1>
             <p
-              className="w-5/12 text-xl text-[#FFF] font-sm ml-24 mt-6"
+              className="w-full lg:w-5/12 text-base lg:text-xl text-[#FFF] pl-12 lg:pl-0 pr-12 lg:pr-0 font-sm ml-0 lg:ml-24 mt-6 text-justify lg:text-start"
               style={{ textShadow: "3px 3px 10px black" }}
             >
               AviaGeek is your ultimate destination for in-depth information on
               a wide range of aircraft models.
             </p>
           </div>
-          <button
-            className="text-white text-xl font-bold border-2 rounded-xl p-2 ml-24 mt-16
+          <div className="flex justify-center lg:justify-start">
+            <button
+              className="text-white text-xs lg:text-xl font-bold border lg:border-2 rounded-lg lg:rounded-xl p-2 ml-0 lg:ml-24 mt-16
         shadow-[1px_1px_5px_#FFF] hover:text-[#DCBB87] hover:border-[#DCBB87] hover:shadow-[1px_1px_5px_#DCBB87]"
-            onClick={handleScroll}
-          >
-            Read More
-          </button>
+              onClick={handleScroll}
+            >
+              Read More
+            </button>
+          </div>
 
-          <div className="animate-icon-01 absolute top-[33%] left-[52%] transform -translate-x-1/2 animate-cross-rotate z-20">
+          <div className="animate-icon-01 absolute top-[48%] left-[62%] lg:top-[33%] lg:left-[52%] transform -translate-x-1/2 animate-cross-rotate z-20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21.094"
@@ -159,7 +142,7 @@ const Page = () => {
 
           <img
             src="/images/front-image.png"
-            className="absolute top-[10%] left-[33%] transform scale-0 animate-scale-once origin-center"
+            className="absolute top-[10%] left-[33%] transform scale-0 animate-scale-once origin-center hidden lg:block"
           />
         </div>
       </section>
@@ -174,7 +157,7 @@ const Page = () => {
           }}
         >
           <h1
-            className="text-[#FFF] text-4xl font-sans font-bold text-center mb-10"
+            className="text-[#FFF] text-2xl lg:text-4xl font-sans font-bold text-center mb-10"
             style={{ textShadow: "3px 3px 10px black" }}
           >
             Top Aircraft Manufacturers
