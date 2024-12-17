@@ -1,5 +1,4 @@
 "use client";
-import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -45,9 +44,6 @@ const Navbar = ({ hasBorder, isTransparent }) => {
             <Link href="/pages/News" className="font-semibold link">
               News
             </Link>
-          </li>
-          <li>
-            <UserButton/>
           </li>
         </ul>
       </div>
