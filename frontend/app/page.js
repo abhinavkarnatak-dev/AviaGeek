@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ReactTyped } from "react-typed";
 import ManufacturerCard from "./components/Home/ManufacturerCard";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const Page = () => {
   // const [isLoading, setIsLoading] = useState(true);
@@ -38,31 +39,7 @@ const Page = () => {
           className="h-screen w-full bg-cover bg-center relative bg-[#19232D] border-b-2 border-[#FFF]"
           style={{ backgroundImage: "url('/images/front-pattern.png')" }}
         >
-          <Link href={"/"}>
-            <img src="/images/AviaGeek-Logo.png" className="w-36 p-4" />
-          </Link>
-          <ul className="absolute top-0 right-0 flex space-x-10 p-6 mr-8 text-[#DCBB87] hover:text-[#FFF] font-sans font-semibold">
-            <li>
-              <Link href={"/"} className="link">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href={"/pages/Aircrafts"} className="link">
-                Aircrafts
-              </Link>
-            </li>
-            <li>
-              <Link href={"/pages/Compare"} className="link">
-                Compare
-              </Link>
-            </li>
-            <li>
-              <Link href={"/pages/News"} className="link">
-                News
-              </Link>
-            </li>
-          </ul>
+          <Navbar hasBorder={false} isTransparent={true}/>
 
           <div className="pt-32">
             <h1
