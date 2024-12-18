@@ -91,7 +91,7 @@ const ComparePage = () => {
                   <img
                     src={getModelDetails(selectedModel1).image}
                     alt={selectedModel1}
-                    className="w-10 h-36 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
+                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
                   />
                   <table className="w-full mt-4">
                     <tbody>
@@ -118,7 +118,7 @@ const ComparePage = () => {
                   <img
                     src={getModelDetails(selectedModel2).image}
                     alt={selectedModel2}
-                    className="w-10 h-36 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
+                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
                   />
                   <table className="w-full mt-4">
                     <tbody>
