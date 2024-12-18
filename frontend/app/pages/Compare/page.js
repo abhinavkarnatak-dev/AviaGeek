@@ -35,8 +35,8 @@ const ComparePage = () => {
     }
   };
   const handleReset = () => {
-    setTempSelectedModel1("")
-    setTempSelectedModel2("")
+    setTempSelectedModel1("");
+    setTempSelectedModel2("");
     setShowCards(false);
   };
 
@@ -80,18 +80,20 @@ const ComparePage = () => {
               </select>
             </div>
 
-            <button
-              className="bg-[#DCBB87] text-[#19232D] font-bold px-4 py-2 rounded hover:bg-[#F6D49F]"
-              onClick={handleCompare}
-            >
-              Compare
-            </button>
-            <button
-              className="bg-[#DCBB87] text-[#19232D] font-bold px-4 py-2 rounded hover:bg-[#F6D49F]"
-              onClick={handleReset}
-            >
-              Reset
-            </button>
+            <div className="flex flex-col lg:flex-row space-x-0 lg:space-x-4 space-y-4 lg:space-y-0">
+              <button
+                className="bg-[#DCBB87] text-[#19232D] font-bold px-4 py-2 rounded hover:bg-[#F6D49F]"
+                onClick={handleCompare}
+              >
+                Compare
+              </button>
+              <button
+                className="bg-[#DCBB87] text-[#19232D] font-bold px-4 py-2 rounded hover:bg-[#F6D49F]"
+                onClick={handleReset}
+              >
+                Reset
+              </button>
+            </div>
           </div>
           {showCards && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mb-8">
