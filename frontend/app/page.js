@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { ReactTyped } from "react-typed";
 import ManufacturerCard from "./components/Home/ManufacturerCard";
@@ -6,6 +7,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Page = () => {
+  useEffect(() => {1
+    alert("This website is currently under development");
+  }, []);
+
   const handleScroll = () => {
     const element = document.getElementById("section-two");
     if (element) {
@@ -36,7 +41,7 @@ const Page = () => {
               Your Aircraft Model{" "}
               <span className="text-[#DCBB87]">
                 <ReactTyped
-                  strings={["Guide", "Details", "Insights", "Resource" ]}
+                  strings={["Guide", "Details", "Insights", "Resource"]}
                   typeSpeed={150}
                   backSpeed={150}
                   loop={true}
@@ -45,7 +50,7 @@ const Page = () => {
               </span>
             </h1>
             <p
-              className="w-full lg:w-5/12 text-base lg:text-xl text-[#FFF] pl-12 lg:pl-0 pr-12 lg:pr-0 font-sm ml-0 lg:ml-24 mt-6 text-justify lg:text-start"
+              className="w-full lg:w-5/12 text-base lg:text-xl text-[#FFF] pl-12 lg:pl-0 pr-12 lg:pr-0 font-sm ml-0 lg:ml-24 mt-10 text-justify lg:text-start"
               style={{ textShadow: "3px 3px 10px black" }}
             >
               AviaGeek is your ultimate destination for in-depth information on
@@ -166,28 +171,28 @@ const Page = () => {
             <ManufacturerCard
               name="Airbus-Logo"
               title="Airbus"
-              desc="A global leader in innovative aircraft design and manufacturing ..."
+              desc="A global leader in innovative aircraft design and manufacturing."
               pageroute="pages/Aircrafts"
             />
             <ManufacturerCard
               name="Boeing-Logo"
               title="Boeing"
-              desc="A pioneering aerospace company renowned for its iconic airplanes ..."
+              desc="A pioneering aerospace company renowned for its iconic airplanes."
             />
             <ManufacturerCard
               name="Embraer-Logo"
               title="Embraer"
-              desc="A global leader in regional aircraft and aviation solutions ..."
+              desc="A global leader in regional aircraft and aviation solutions."
             />
             <ManufacturerCard
               name="Mitsubishi-Logo"
               title="Mitsubishi Aircraft Corporation"
-              desc="Innovative manufacturer of advanced regional jets and aircraft systems ..."
+              desc="Leading innovator in advanced regional jet manufacturing."
             />
             <ManufacturerCard
               name="Bombardier-Logo"
               title="Bombardier"
-              desc="Leader in business jets and advanced aerospace solutions ..."
+              desc="Leader in business jets and advanced aerospace solutions."
             />
           </div>
         </div>

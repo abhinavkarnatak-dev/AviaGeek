@@ -34,6 +34,11 @@ const ComparePage = () => {
       alert("Please select both models to compare!");
     }
   };
+  const handleReset = () => {
+    setTempSelectedModel1("")
+    setTempSelectedModel2("")
+    setShowCards(false);
+  };
 
   return (
     <>
@@ -81,6 +86,12 @@ const ComparePage = () => {
             >
               Compare
             </button>
+            <button
+              className="bg-[#DCBB87] text-[#19232D] font-bold px-4 py-2 rounded hover:bg-[#F6D49F]"
+              onClick={handleReset}
+            >
+              Reset
+            </button>
           </div>
           {showCards && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mb-8">
@@ -91,9 +102,9 @@ const ComparePage = () => {
                   <img
                     src={getModelDetails(selectedModel1).image}
                     alt={selectedModel1}
-                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
+                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-8 rounded-xl"
                   />
-                  <table className="w-full mt-4">
+                  <table className="w-full mt-8">
                     <tbody>
                       {Object.entries(
                         getModelDetails(selectedModel1).features
@@ -118,9 +129,9 @@ const ComparePage = () => {
                   <img
                     src={getModelDetails(selectedModel2).image}
                     alt={selectedModel2}
-                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-4 rounded-xl"
+                    className="w-auto h-40 lg:w-full lg:h-72 object-cover mt-8 rounded-xl"
                   />
-                  <table className="w-full mt-4">
+                  <table className="w-full mt-8">
                     <tbody>
                       {Object.entries(
                         getModelDetails(selectedModel2).features
