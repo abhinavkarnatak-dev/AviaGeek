@@ -83,7 +83,7 @@ const ComparePage = () => {
             </button>
           </div>
           {showCards && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mb-8">
               {selectedModel1 && (
                 <div className="bg-gray-800 p-4 rounded-2xl text-white border-2 border-[#DCBB87]">
                   <h2 className="text-lg font-bold">{selectedModel1}</h2>
