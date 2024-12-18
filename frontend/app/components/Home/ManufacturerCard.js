@@ -13,7 +13,7 @@ const ManufacturerCard = (props) => {
         <h2 className="text-[#19232D] text-sm lg:text-xl font-bold pt-4 text-nowrap">
           {props.title}
         </h2>
-        <p className="text-[#19232D] text-xs lg:text-base font-medium mt-2 text-justify mb-12">
+        <p className="text-[#19232D] text-xs lg:text-base font-medium mt-2 text-justify mb-12 lg:mb-8">
           {props.desc}
         </p>
         <Button text="Learn More" buttonroute={props.pageroute} />
