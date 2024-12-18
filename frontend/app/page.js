@@ -172,27 +172,31 @@ const Page = () => {
               name="Airbus-Logo"
               title="Airbus"
               desc="A global leader in innovative aircraft design and manufacturing."
-              pageroute="pages/Aircrafts"
+              pageroute="pages/Airbus"
             />
             <ManufacturerCard
               name="Boeing-Logo"
               title="Boeing"
               desc="A pioneering aerospace company renowned for its iconic airplanes."
+              pageroute="pages/Boeing"
             />
             <ManufacturerCard
               name="Embraer-Logo"
               title="Embraer"
               desc="A global leader in regional aircraft and aviation solutions."
+              pageroute="pages/Embraer"
             />
             <ManufacturerCard
               name="Mitsubishi-Logo"
               title="Mitsubishi Aircraft Corporation"
               desc="Leading innovator in advanced regional jet manufacturing."
+              pageroute="pages/Mitsubishi"
             />
             <ManufacturerCard
               name="Bombardier-Logo"
               title="Bombardier"
               desc="Leader in business jets and advanced aerospace solutions."
+              pageroute="pages/Bombardier"
             />
           </div>
         </div>
