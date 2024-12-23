@@ -1,13 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const handleSubmit = (e) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
+    try {
+      const res = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (res.error) {
+        setError("Invalid Credentials");
+      }
+      router.replace("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -27,6 +47,7 @@ const Login = () => {
             placeholder="Email address"
             required
             className="w-full bg-[#19232d] border border-[#dcbb87]/20 text-white rounded-md px-4 py-3 focus:outline-none focus:border-[#dcbb87] transition-colors mb-4"
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
@@ -34,6 +55,7 @@ const Login = () => {
             placeholder="Password"
             required
             className="w-full bg-[#19232d] border border-[#dcbb87]/20 text-white rounded-md px-4 py-3 focus:outline-none focus:border-[#dcbb87] transition-colors mb-4"
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button
             type="submit"
@@ -42,9 +64,11 @@ const Login = () => {
             Log In
           </button>
         </form>
-        <div className="bg-red-500 text-[#FFF] w-fit text-sm py-1 px-3 rounded-md mt-2">
-          Error Message
-        </div>
+        {error && (
+          <div className="bg-red-500 text-[#FFF] w-fit text-sm py-1 px-3 rounded-md mt-2">
+            {error}
+          </div>
+        )}
 
         <div className="flex flex-col items-center gap-4 mt-6">
           <p className="text-white text-center">

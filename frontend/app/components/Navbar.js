@@ -1,19 +1,19 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LogIn, UserPlus } from "lucide-react";
+import { useSession, signOut } from "next-auth/react"; // Import NextAuth hooks
 import Profile from "./Profile";
 
 const Navbar = ({ hasBorder, isTransparent }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, status } = useSession(); // Use NextAuth session hook
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav
-      className={`w-full ${
-        isTransparent ? "bg-transparent" : "bg-[#19232D]"
-      } text-[#DCBB87] ${hasBorder ? "border-b-2 border-[#FFF]" : ""}`}
+      className={`w-full ${isTransparent ? "bg-transparent" : "bg-[#19232D]"} text-[#DCBB87] ${hasBorder ? "border-b-2 border-[#FFF]" : ""}`}
     >
       <div className="flex items-center justify-between p-4 pl-0 pr-0 lg:p-4 mx-8 relative">
         <Link href="/">
@@ -56,23 +56,34 @@ const Navbar = ({ hasBorder, isTransparent }) => {
               Compare
             </Link>
           </li>
-          <li className="text-center">
-            <Link href="/pages/login">
-              <button className="h-10 bg-[#dcbb87] text-[#19232d] font-semibold py-2 px-4 rounded-xl hover:bg-[#c5a876] transition-colors duration-300 flex items-center space-x-2">
-                <LogIn size={18} />
-                <span>Login</span>
-              </button>
-            </Link>
-          </li>
-          <li className="text-center">
-            <Link href="/pages/signup">
-              <button className="w-32 h-10 bg-transparent border-2 border-[#dcbb87] text-[#dcbb87] font-semibold py-2 px-4 rounded-xl hover:bg-[#dcbb87] hover:text-[#19232d] transition-colors duration-300 flex items-center space-x-2">
-                <UserPlus size={18} />
-                <span>Sign Up</span>
-              </button>
-            </Link>
-          </li>
-          <li><Profile/></li>
+
+          {/* Conditionally render Login/Signup or Profile based on session */}
+          {status === "authenticated" ? (
+            <>
+              <li>
+                <Profile /> {/* Show Profile when logged in */}
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="text-center">
+                <Link href="/pages/login">
+                  <button className="h-10 bg-[#dcbb87] text-[#19232d] font-semibold py-2 px-4 rounded-xl hover:bg-[#c5a876] transition-colors duration-300 flex items-center space-x-2">
+                    <LogIn size={18} />
+                    <span>Login</span>
+                  </button>
+                </Link>
+              </li>
+              <li className="text-center">
+                <Link href="/pages/signup">
+                  <button className="w-32 h-10 bg-transparent border-2 border-[#dcbb87] text-[#dcbb87] font-semibold py-2 px-4 rounded-xl hover:bg-[#dcbb87] hover:text-[#19232d] transition-colors duration-300 flex items-center space-x-2">
+                    <UserPlus size={18} />
+                    <span>Sign Up</span>
+                  </button>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>
