@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ChevronDown, ChevronRight, Heart } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp, Heart } from "lucide-react";
 import { aircraftData } from "../../data/aircraftData";
-import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 
@@ -76,13 +75,13 @@ export default function AircraftDetails() {
         <h3 className="text-lg font-semibold text-[#DCBB87]">{model.name}</h3>
         <Button
           variant="ghost"
-          className="h-8 w-8 p-0 bg-gray-500"
+          className="p-0"
           onClick={() => toggleModel(model.id)}
         >
           {expandedModel === model.id ? (
-            <ChevronDown className="h-4 w-4" />
+            <ChevronUp className="h-4 w-4" />
           ) : (
-            <ChevronRight className="h-4 w-4" />
+            <ChevronDown className="h-4 w-4" />
           )}
         </Button>
       </div>
@@ -100,7 +99,7 @@ export default function AircraftDetails() {
             <div className="flex justify-between items-center">
               <Button
                 variant="outline"
-                className="text-sm font-bold"
+                className="text-sm font-bold hover:bg-[#c5a876]"
                 onClick={() => toggleFavorite(model.id)}
               >
                 <Heart
