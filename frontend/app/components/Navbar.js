@@ -77,7 +77,7 @@ const Navbar = ({ hasBorder, isTransparent }) => {
               </li>
               <li className="text-center">
                 <Link href="/pages/signup">
-                  <button className="w-32 h-10 bg-transparent border-2 border-[#dcbb87] text-[#dcbb87] font-semibold py-2 px-4 rounded-xl hover:bg-[#dcbb87] hover:text-[#19232d] transition-colors duration-300 flex items-center space-x-2">
+                  <button className="w-32 h-10 bg-[#19232D] border-2 border-[#dcbb87] text-[#dcbb87] font-semibold py-2 px-4 rounded-xl hover:bg-[#dcbb87] hover:text-[#19232d] transition-colors duration-300 flex items-center space-x-2">
                     <UserPlus size={18} />
                     <span>Sign Up</span>
                   </button>

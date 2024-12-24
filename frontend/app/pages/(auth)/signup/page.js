@@ -64,7 +64,7 @@ const Signup = () => {
   if (isLoading) {
     return (
       <div className="w-full h-screen bg-[#19232D] text-[#DCBB87] text-lg font-semibold flex items-center justify-center">
-        Redirecting...
+        Loading...
       </div>
     );
   }

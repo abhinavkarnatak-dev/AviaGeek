@@ -1,11 +1,29 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import ManufacturerCard from "./components/Home/ManufacturerCard";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Page = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+    const timeout = setTimeout(handleLoad, 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen w-full flex justify-center items-center bg-[#19232D]">
+        <h1 className="text-[#DCBB87] text-lg font-semibold">Loading...</h1>
+      </div>
+    );
+  }
+
   const handleScroll = () => {
     const element = document.getElementById("section-two");
     if (element) {
@@ -54,7 +72,7 @@ const Page = () => {
           </div>
           <div className="flex justify-center lg:justify-start">
             <button
-              className="text-white text-xs lg:text-xl font-bold border lg:border-2 rounded-lg lg:rounded-xl p-2 ml-0 lg:ml-24 mt-16
+              className="text-white bg-[#19232D] text-xs lg:text-xl font-bold border lg:border-2 rounded-lg lg:rounded-xl p-2 ml-0 lg:ml-24 mt-16
         shadow-[1px_1px_5px_#FFF] hover:text-[#DCBB87] hover:border-[#DCBB87] hover:shadow-[1px_1px_5px_#DCBB87]"
               onClick={handleScroll}
             >
@@ -142,7 +160,7 @@ const Page = () => {
 
           <img
             src="/images/front-image.png"
-            className="absolute top-[10%] left-[33%] transform scale-0 animate-scale-once origin-center hidden lg:block"
+            className="absolute top-[5%] left-[33%] transform scale-0 animate-scale-once origin-center hidden md:block lg:block"
           />
         </div>
       </section>

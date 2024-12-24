@@ -1,7 +1,26 @@
+"use client";
 import Navbar from "@/app/components/Navbar";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const page = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+    const timeout = setTimeout(handleLoad, 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen w-full flex justify-center items-center bg-[#19232D]">
+        <h1 className="text-[#DCBB87] text-lg font-semibold">Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="w-full min-h-screen bg-[#19232D]">

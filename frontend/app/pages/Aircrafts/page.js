@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, ChevronUp, Heart } from "lucide-react";
 import { aircraftData } from "../../data/aircraftData";
@@ -41,6 +41,24 @@ export default function AircraftDetails() {
   const [expandedFamily, setExpandedFamily] = useState(null);
   const [expandedModel, setExpandedModel] = useState(null);
   const [favorites, setFavorites] = useState(new Set());
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+    const timeout = setTimeout(handleLoad, 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen w-full flex justify-center items-center bg-[#19232D]">
+        <h1 className="text-[#DCBB87] text-lg font-semibold">Loading...</h1>
+      </div>
+    );
+  }
 
   const toggleCompany = (companyId) => {
     setExpandedCompany(expandedCompany === companyId ? null : companyId);
@@ -94,6 +112,7 @@ export default function AircraftDetails() {
               width={300}
               height={200}
               className="rounded-lg object-cover"
+              priority={true}
             />
             <p className="text-white text-sm lg:text-base">{model.desc}</p>
             <div className="flex justify-between items-center">

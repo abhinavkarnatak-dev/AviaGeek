@@ -732,8 +732,8 @@ export const aircraftData = [
         models: [
           {
             uniquenumber: 30,
-            id: "717-200",
-            name: "717-200",
+            id: "b717-200",
+            name: "B717-200",
             desc: "Short-range, twin-engine jet designed for regional routes.",
             image: "/placeholder.svg?height=200&width=300",
             features: {
@@ -761,8 +761,8 @@ export const aircraftData = [
         models: [
           {
             uniquenumber: 31,
-            id: "727-100",
-            name: "727-100",
+            id: "b727-100",
+            name: "B727-100",
             desc: "Early model, tri-jet, short to medium-range airliner.",
             image: "/placeholder.svg?height=200&width=300",
             features: {
@@ -784,8 +784,8 @@ export const aircraftData = [
           },
           {
             uniquenumber: 32,
-            id: "727-200",
-            name: "727-200",
+            id: "b727-200",
+            name: "B727-200",
             desc: "Extended fuselage, tri-jet, medium-range airliner.",
             image: "/placeholder.svg?height=200&width=300",
             features: {

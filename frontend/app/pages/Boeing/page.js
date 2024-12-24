@@ -1,21 +1,44 @@
+"use client";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { Plane, Award, Users, Globe2, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+    const timeout = setTimeout(handleLoad, 300);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen w-full flex justify-center items-center bg-[#19232D]">
+        <h1 className="text-[#DCBB87] text-lg font-semibold">Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#19232d] text-[#dcbb87]">
       <Navbar hasBorder={true} isTransparent={false} />
       <header className="relative h-[60vh] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-black opacity-30"
-          style={{
-            backgroundImage: 'url("/images/Companies/Boeing.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 bg-black opacity-30">
+          <Image
+            src="/images/Companies/Boeing.jpg"
+            alt="Boeing Background"
+            layout="fill"
+            objectFit="cover"
+            priority={true}
+          />
+        </div>
+
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">Boeing</h1>
           <p className="text-md lg:text-xl max-w-2xl mx-auto text-[#FFF]">
@@ -49,7 +72,7 @@ function App() {
           <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-center">
             Innovation in Aerospace
           </h2>
-          <div className="space-y-6 text-lg opacity-90">
+          <div className="space-y-6 text-lg opacity-90 pl-7 lg:pl-0 pr-7 lg:pr-0">
             <p className="text-justify text-[#FFF] text-sm lg:text-lg">
               Boeing is a leading global aerospace company that designs,
               manufactures, and services commercial and military aircraft,

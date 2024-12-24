@@ -19,7 +19,6 @@ const Profile = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Generate initials from the name
   const getInitials = (fullName) => {
     const nameParts = fullName.split(" ");
     const initials = nameParts
@@ -29,7 +28,6 @@ const Profile = () => {
     return initials;
   };
 
-  // Generate a background color based on the name
   const getBackgroundColor = (fullName) => {
     const colors = [
       "#F87171",
@@ -73,10 +71,12 @@ const Profile = () => {
             <p className="text-sm text-[#FFF]">{session.user.email}</p>
           </div>
 
-          <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
-            <User className="w-4 h-4" />
-            Account
-          </button>
+          {/* <Link href="/pages/Profile">
+            <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
+              <User className="w-4 h-4" />
+              Account
+            </button>
+          </Link> */}
 
           <Link href="/pages/Favorites">
             <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
