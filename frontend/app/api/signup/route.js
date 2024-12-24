@@ -7,7 +7,6 @@ export async function POST(req) {
   try {
     const { name, email, password } = await req.json();
 
-    // Basic validation
     if (!name || !email || !password) {
       return NextResponse.json(
         { message: "All fields are required" },
@@ -17,7 +16,6 @@ export async function POST(req) {
 
     await connectMongoDB();
 
-    // Check for existing email
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json(

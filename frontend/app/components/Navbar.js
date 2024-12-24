@@ -2,18 +2,20 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { LogIn, UserPlus } from "lucide-react";
-import { useSession, signOut } from "next-auth/react"; // Import NextAuth hooks
+import { useSession, signOut } from "next-auth/react";
 import Profile from "./Profile";
 
 const Navbar = ({ hasBorder, isTransparent }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { data: session, status } = useSession(); // Use NextAuth session hook
+  const { data: session, status } = useSession();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav
-      className={`w-full ${isTransparent ? "bg-transparent" : "bg-[#19232D]"} text-[#DCBB87] ${hasBorder ? "border-b-2 border-[#FFF]" : ""}`}
+      className={`w-full ${
+        isTransparent ? "bg-transparent" : "bg-[#19232D]"
+      } text-[#DCBB87] ${hasBorder ? "border-b-2 border-[#FFF]" : ""}`}
     >
       <div className="flex items-center justify-between p-4 pl-0 pr-0 lg:p-4 mx-8 relative">
         <Link href="/">
@@ -57,11 +59,10 @@ const Navbar = ({ hasBorder, isTransparent }) => {
             </Link>
           </li>
 
-          {/* Conditionally render Login/Signup or Profile based on session */}
           {status === "authenticated" ? (
             <>
               <li>
-                <Profile /> {/* Show Profile when logged in */}
+                <Profile />
               </li>
             </>
           ) : (

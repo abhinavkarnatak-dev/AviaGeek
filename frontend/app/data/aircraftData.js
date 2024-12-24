@@ -8,6 +8,7 @@ export const aircraftData = [
         name: "A220 Family",
         models: [
           {
+            uniquenumber: 1,
             id: "a220-100",
             name: "A220-100",
             desc: "A smaller, single-aisle regional jet from Airbus, offering efficiency for short to medium-range flights.",
@@ -30,6 +31,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 2,
             id: "a220-300",
             name: "A220-300",
             desc: "A larger variant of the A220-100, offering more passenger capacity while maintaining fuel efficiency.",
@@ -58,6 +60,7 @@ export const aircraftData = [
         name: "A310 Family",
         models: [
           {
+            uniquenumber: 3,
             id: "a310-200",
             name: "A310-200",
             desc: "The earlier, shorter version of the A310-300, primarily used for medium to long-haul flights, now mostly retired.",
@@ -80,6 +83,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 4,
             id: "a310-200f",
             name: "A310-200F",
             desc: "The freighter version of the A310-200, designed for cargo operations with a reinforced structure and larger cargo hold.",
@@ -102,6 +106,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 5,
             id: "a310-300",
             name: "A310-300",
             desc: "A wide-body twin-engine airliner from Airbus, often used for both commercial and cargo operations.",
@@ -124,6 +129,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 6,
             id: "a310-300f",
             name: "A310-300F",
             desc: "The freighter version of the A310-300, used for cargo operations, especially on medium to long-haul routes.",
@@ -152,6 +158,7 @@ export const aircraftData = [
         name: "A320 Family",
         models: [
           {
+            uniquenumber: 7,
             id: "a318",
             name: "A318",
             desc: "The smallest member of the Airbus A320 family, designed for short to medium-haul routes.",
@@ -174,6 +181,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 8,
             id: "a319",
             name: "A319",
             desc: "A shorter version of the A320, with a reduced passenger capacity but similar range and performance.",
@@ -196,6 +204,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 9,
             id: "a320",
             name: "A320",
             desc: "A widely-used, single-aisle airliner known for its fuel efficiency and versatility in both short and medium-range operations.",
@@ -218,6 +227,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 10,
             id: "a320neo",
             name: "A320neo",
             desc: "A new engine option for the A320, offering improved fuel efficiency, reduced noise, and longer range compared to the original A320.",
@@ -241,6 +251,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 11,
             id: "a321",
             name: "A321",
             desc: "A stretched version of the A320, capable of carrying more passengers and used for medium-haul flights.",
@@ -263,6 +274,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 12,
             id: "a321neo",
             name: "A321neo",
             desc: "The upgraded version of the A321 with new, more efficient engines and improved fuel economy, often used for longer routes.",
@@ -286,6 +298,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 13,
             id: "a321xlr",
             name: "A321XLR",
             desc: "An extended range version of the A321neo, allowing for longer transcontinental routes with improved fuel efficiency.",
@@ -314,6 +327,7 @@ export const aircraftData = [
         name: "A330 Family",
         models: [
           {
+            uniquenumber: 14,
             id: "a330-200",
             name: "A330-200",
             desc: "A wide-body, twin-engine airliner designed for long-haul flights, with a slightly shorter fuselage than the A330-300.",
@@ -336,6 +350,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 15,
             id: "a330-300",
             name: "A330-300",
             desc: "A long-range, wide-body airliner with higher passenger capacity, often used for medium to long-haul flights.",
@@ -358,6 +373,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 16,
             id: "a330-800",
             name: "A330-800",
             desc: "A smaller version of the A330neo, offering improved fuel efficiency and longer range with a reduced passenger capacity.",
@@ -380,6 +396,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 17,
             id: "a330-800neo",
             name: "A330-800neo",
             desc: "The upgraded A330-800, equipped with new engines and aerodynamic improvements for enhanced efficiency.",
@@ -402,6 +419,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 18,
             id: "a330-900",
             name: "A330-900",
             desc: "A longer version of the A330neo, offering greater passenger capacity and range, designed for long-haul flights.",
@@ -424,6 +442,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 19,
             id: "a330-900neo",
             name: "A330-900neo",
             desc: "The updated version of the A330-900 with more efficient engines and aerodynamic enhancements for improved performance.",
@@ -452,6 +471,7 @@ export const aircraftData = [
         name: "A340 Family",
         models: [
           {
+            uniquenumber: 20,
             id: "a340-200",
             name: "A340-200",
             desc: "A long-range, wide-body quad-engine airliner, known for its capability on ultra-long routes but phased out due to engine inefficiency.",
@@ -474,6 +494,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 21,
             id: "a340-300",
             name: "A340-300",
             desc: "A stretched version of the A340-200 with greater passenger capacity, primarily used for long-haul flights.",
@@ -496,6 +517,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 22,
             id: "a340-500",
             name: "A340-500",
             desc: "The longest-range variant of the A340, designed for ultra-long-haul flights, but eventually phased out due to fuel inefficiency.",
@@ -518,6 +540,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 23,
             id: "a340-600",
             name: "A340-600",
             desc: "A stretched version of the A340-300, offering larger capacity and capable of long-haul flights, but now being retired due to more efficient aircraft.",
@@ -546,6 +569,7 @@ export const aircraftData = [
         name: "A350 Family",
         models: [
           {
+            uniquenumber: 24,
             id: "a350-900",
             name: "A350-900",
             desc: "A modern, wide-body twin-engine airliner designed for long-haul flights with improved fuel efficiency and passenger comfort.",
@@ -568,6 +592,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 25,
             id: "a350-1000",
             name: "A350-1000",
             desc: "An extended version of the A350-900, offering increased passenger capacity and range for long-haul routes.",
@@ -590,6 +615,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 26,
             id: "a350f",
             name: "A350F",
             desc: "A freighter version of the A350, designed to carry cargo with the same efficiency as the A350 passenger models, currently under development.",
@@ -618,6 +644,7 @@ export const aircraftData = [
         name: "A380 Family",
         models: [
           {
+            uniquenumber: 27,
             id: "a380-800",
             name: "A380-800",
             desc: "The world’s largest commercial passenger airliner, offering four engines and huge passenger capacity for long-haul flights.",
@@ -646,6 +673,7 @@ export const aircraftData = [
         name: "Beluga Family",
         models: [
           {
+            uniquenumber: 28,
             id: "beluga",
             name: "A300-600ST (Beluga)",
             desc: "A cargo variant of the Airbus A300, known for its oversized cargo hold, used for transporting large and heavy parts.",
@@ -668,6 +696,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 29,
             id: "belugaxl",
             name: "A330-700L (Beluga XL)",
             desc: "An upgraded version of the Beluga, based on the A330-200, used for transporting oversized cargo with increased capacity.",
@@ -702,6 +731,7 @@ export const aircraftData = [
         name: "717 Family",
         models: [
           {
+            uniquenumber: 30,
             id: "717-200",
             name: "717-200",
             desc: "Short-range, twin-engine jet designed for regional routes.",
@@ -730,6 +760,7 @@ export const aircraftData = [
         name: "727 Family",
         models: [
           {
+            uniquenumber: 31,
             id: "727-100",
             name: "727-100",
             desc: "Early model, tri-jet, short to medium-range airliner.",
@@ -752,6 +783,7 @@ export const aircraftData = [
             },
           },
           {
+            uniquenumber: 32,
             id: "727-200",
             name: "727-200",
             desc: "Extended fuselage, tri-jet, medium-range airliner.",

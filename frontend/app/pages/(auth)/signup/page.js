@@ -4,25 +4,24 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { getSession } from "next-auth/react"; // Import getSession
+import { getSession } from "next-auth/react";
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(true); // State to track loading status
+  const [isLoading, setIsLoading] = useState(true);
 
   const router = useRouter();
 
-  // Check session on component mount
   useEffect(() => {
     const checkSession = async () => {
-      const session = await getSession(); // Get the current session
+      const session = await getSession();
       if (session) {
-        router.push("/"); // Redirect to home if logged in
+        router.push("/");
       } else {
-        setIsLoading(false); // Stop loading when the session check is done
+        setIsLoading(false);
       }
     };
     checkSession();
@@ -63,7 +62,11 @@ const Signup = () => {
   };
 
   if (isLoading) {
-    return <div className="w-full h-screen bg-[#19232D] text-[#DCBB87] text-lg font-semibold flex items-center justify-center">Redirecting...</div>;
+    return (
+      <div className="w-full h-screen bg-[#19232D] text-[#DCBB87] text-lg font-semibold flex items-center justify-center">
+        Redirecting...
+      </div>
+    );
   }
 
   return (
@@ -124,9 +127,9 @@ const Signup = () => {
               Log in
             </Link>
           </p>
-          {/* <Link href="/" className="text-[#dcbb87] hover:underline text-sm">
-            Skip to Homepage
-          </Link> */}
+          <Link href="/" className="text-[#dcbb87] hover:underline text-sm">
+            Back to Homepage
+          </Link>
         </div>
       </div>
     </div>

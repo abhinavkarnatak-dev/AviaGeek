@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { User, Heart, LogOut } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 const Profile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,10 +78,12 @@ const Profile = () => {
             Account
           </button>
 
-          <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
-            <Heart className="w-4 h-4" />
-            Favorites
-          </button>
+          <Link href="/pages/Favorites">
+            <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
+              <Heart className="w-4 h-4" />
+              Favorites
+            </button>
+          </Link>
 
           <div className="mt-2">
             <button
