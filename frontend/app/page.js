@@ -1,16 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
-import Link from "next/link";
+import React from "react";
 import { ReactTyped } from "react-typed";
 import ManufacturerCard from "./components/Home/ManufacturerCard";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Page = () => {
-  useEffect(() => {1
-    alert("This website is currently under development");
-  }, []);
-
   const handleScroll = () => {
     const element = document.getElementById("section-two");
     if (element) {

@@ -80,9 +80,9 @@ const Login = () => {
               Sign up
             </Link>
           </p>
-          <Link href="/" className="text-[#dcbb87] hover:underline text-sm">
+          {/* <Link href="/" className="text-[#dcbb87] hover:underline text-sm">
             Skip to Homepage
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
