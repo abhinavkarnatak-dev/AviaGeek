@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronRight, ChevronUp, Heart } from "lucide-react";
-import { aircraftData } from "../../data/aircraftData";
+import { aircraftData } from "../data/aircraftData";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { useSession } from "next-auth/react";

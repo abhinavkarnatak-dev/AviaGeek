@@ -99,7 +99,7 @@ function App() {
             Explore Boeing's full range of aircraft, from the iconic 737 to the
             advanced 787 Dreamliner.
           </p>
-          <Link href="/pages/Aircrafts">
+          <Link href="/Aircrafts">
             <button className="group bg-[#dcbb87] text-[#19232d] px-8 py-4 rounded-lg font-semibold transition-all hover:bg-[#c5a876] flex items-center gap-2 mx-auto">
               View Aircraft Models
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

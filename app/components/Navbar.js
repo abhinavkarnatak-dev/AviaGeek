@@ -61,12 +61,12 @@ const Navbar = ({ hasBorder, isTransparent }) => {
             </Link>
           </li>
           <li className="text-center">
-            <Link href="/pages/Aircrafts" className="font-semibold link">
+            <Link href="/Aircrafts" className="font-semibold link">
               Aircrafts
             </Link>
           </li>
           <li className="text-center">
-            <Link href="/pages/Compare" className="font-semibold link">
+            <Link href="/Compare" className="font-semibold link">
               Compare
             </Link>
           </li>

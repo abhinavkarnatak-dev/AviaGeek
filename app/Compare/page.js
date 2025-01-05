@@ -2,7 +2,7 @@
 
 import Navbar from "@/app/components/Navbar";
 import React, { useState, useEffect } from "react";
-import { aircraftData } from "../../data/aircraftData";
+import { aircraftData } from "../data/aircraftData";
 import Footer from "@/app/components/Footer";
 
 const ComparePage = () => {

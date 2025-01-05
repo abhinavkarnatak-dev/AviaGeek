@@ -67,7 +67,7 @@ const Profile = () => {
             <p className="text-xs text-[#FFF]">{session.user.email}</p>
           </div>
 
-          <Link href="/pages/Favorites">
+          <Link href="/user/Favorites">
             <button className="w-full px-4 py-2 text-left text-[#FFF] flex items-center gap-2">
               <Heart className="w-4 h-4" />
               Favorites
