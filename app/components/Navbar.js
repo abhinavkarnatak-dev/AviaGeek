@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { LogIn, UserPlus } from "lucide-react";
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Profile from "./Profile";
 
 const Navbar = ({ hasBorder, isTransparent }) => {
@@ -11,13 +11,25 @@ const Navbar = ({ hasBorder, isTransparent }) => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+      function handleClickOutside(event) {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      }
+  
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
   return (
     <nav
       className={`w-full ${
         isTransparent ? "bg-transparent" : "bg-[#19232D]"
       } text-[#DCBB87] ${hasBorder ? "border-b-2 border-[#FFF]" : ""}`}
     >
-      <div className="flex items-center justify-between p-4 pl-0 pr-0 lg:p-4 mx-8 relative">
+      <div className="flex items-center justify-between p-4 pl-0 pr-0 lg:p-4 mx-8 relative" ref={dropdownRef}>
         <Link href="/">
           <img
             src="https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736059385/AviaGeek-Logo_pow1r7.png"

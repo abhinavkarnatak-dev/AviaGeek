@@ -12,7 +12,7 @@ export const aircraftData = [
             id: "a220-100",
             name: "A220-100",
             desc: "A smaller, single-aisle regional jet from Airbus, offering efficiency for short to medium-range flights.",
-            image: "/images/modelsImages/airbus/A220-100.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093696/A220-100_dnitqn.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "Canada",
@@ -35,7 +35,7 @@ export const aircraftData = [
             id: "a220-300",
             name: "A220-300",
             desc: "A larger variant of the A220-100, offering more passenger capacity while maintaining fuel efficiency.",
-            image: "/images/modelsImages/airbus/A220-300.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093697/A220-300_xtp6ka.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "Canada",
@@ -64,7 +64,7 @@ export const aircraftData = [
             id: "a310-200",
             name: "A310-200",
             desc: "The earlier, shorter version of the A310-300, primarily used for medium to long-haul flights, now mostly retired.",
-            image: "/images/modelsImages/airbus/A310-200.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093694/A310-200_qcbm20.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -87,7 +87,7 @@ export const aircraftData = [
             id: "a310-200f",
             name: "A310-200F",
             desc: "The freighter version of the A310-200, designed for cargo operations with a reinforced structure and larger cargo hold.",
-            image: "/images/modelsImages/airbus/A310-200F.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093694/A310-200F_ubdjgl.jpg",
             features: {
               "Type": "Wide-body (Freighter)",
               "Country of Origin": "France",
@@ -110,7 +110,7 @@ export const aircraftData = [
             id: "a310-300",
             name: "A310-300",
             desc: "A wide-body twin-engine airliner from Airbus, often used for both commercial and cargo operations.",
-            image: "/images/modelsImages/airbus/A310-300.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093697/A310-300_ay9tyn.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -133,7 +133,7 @@ export const aircraftData = [
             id: "a310-300f",
             name: "A310-300F",
             desc: "The freighter version of the A310-300, used for cargo operations, especially on medium to long-haul routes.",
-            image: "/images/modelsImages/airbus/A310-300F.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093692/A310-300F_oldmzo.jpg",
             features: {
               "Type": "Wide-body (Freighter)",
               "Country of Origin": "France",
@@ -162,7 +162,7 @@ export const aircraftData = [
             id: "a318",
             name: "A318",
             desc: "The smallest member of the Airbus A320 family, designed for short to medium-haul routes.",
-            image: "/images/modelsImages/airbus/A318.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093703/A318_ab6jbs.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -185,7 +185,7 @@ export const aircraftData = [
             id: "a319",
             name: "A319",
             desc: "A shorter version of the A320, with a reduced passenger capacity but similar range and performance.",
-            image: "/images/modelsImages/airbus/A319.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093702/A319_khdtfu.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -208,7 +208,7 @@ export const aircraftData = [
             id: "a320",
             name: "A320",
             desc: "A widely-used, single-aisle airliner known for its fuel efficiency and versatility in both short and medium-range operations.",
-            image: "/images/modelsImages/airbus/A320.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093703/A320_m9ubju.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -231,7 +231,7 @@ export const aircraftData = [
             id: "a320neo",
             name: "A320neo",
             desc: "A new engine option for the A320, offering improved fuel efficiency, reduced noise, and longer range compared to the original A320.",
-            image: "/images/modelsImages/airbus/A320neo.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093705/A320neo_gaskoy.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -255,7 +255,7 @@ export const aircraftData = [
             id: "a321",
             name: "A321",
             desc: "A stretched version of the A320, capable of carrying more passengers and used for medium-haul flights.",
-            image: "/images/modelsImages/airbus/A321.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093706/A321_tulqlf.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -278,7 +278,7 @@ export const aircraftData = [
             id: "a321neo",
             name: "A321neo",
             desc: "The upgraded version of the A321 with new, more efficient engines and improved fuel economy, often used for longer routes.",
-            image: "/images/modelsImages/airbus/A321neo.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093704/A321neo_mhke8x.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -302,7 +302,7 @@ export const aircraftData = [
             id: "a321xlr",
             name: "A321XLR",
             desc: "An extended range version of the A321neo, allowing for longer transcontinental routes with improved fuel efficiency.",
-            image: "/images/modelsImages/airbus/A321xlr.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093705/A321xlr_jyl6ww.jpg",
             features: {
               "Type": "Narrow-body",
               "Country of Origin": "France",
@@ -331,7 +331,7 @@ export const aircraftData = [
             id: "a330-200",
             name: "A330-200",
             desc: "A wide-body, twin-engine airliner designed for long-haul flights, with a slightly shorter fuselage than the A330-300.",
-            image: "/images/modelsImages/airbus/A330-200.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093706/A330-200_jl4aon.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -354,7 +354,7 @@ export const aircraftData = [
             id: "a330-300",
             name: "A330-300",
             desc: "A long-range, wide-body airliner with higher passenger capacity, often used for medium to long-haul flights.",
-            image: "/images/modelsImages/airbus/A330-300.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093707/A330-300_mlxl1p.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -377,7 +377,7 @@ export const aircraftData = [
             id: "a330-800",
             name: "A330-800",
             desc: "A smaller version of the A330neo, offering improved fuel efficiency and longer range with a reduced passenger capacity.",
-            image: "/images/modelsImages/airbus/A330-800.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093709/A330-800_tganak.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -400,7 +400,7 @@ export const aircraftData = [
             id: "a330-800neo",
             name: "A330-800neo",
             desc: "The upgraded A330-800, equipped with new engines and aerodynamic improvements for enhanced efficiency.",
-            image: "/images/modelsImages/airbus/A330-800neo.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093707/A330-800neo_rmavbg.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -423,7 +423,7 @@ export const aircraftData = [
             id: "a330-900",
             name: "A330-900",
             desc: "A longer version of the A330neo, offering greater passenger capacity and range, designed for long-haul flights.",
-            image: "/images/modelsImages/airbus/A330-900.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093709/A330-900_sfpnnl.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -446,7 +446,7 @@ export const aircraftData = [
             id: "a330-900neo",
             name: "A330-900neo",
             desc: "The updated version of the A330-900 with more efficient engines and aerodynamic enhancements for improved performance.",
-            image: "/images/modelsImages/airbus/A330-900neo.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093708/A330-900neo_hn1qnv.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -475,7 +475,7 @@ export const aircraftData = [
             id: "a340-200",
             name: "A340-200",
             desc: "A long-range, wide-body quad-engine airliner, known for its capability on ultra-long routes but phased out due to engine inefficiency.",
-            image: "/images/modelsImages/airbus/A340-200.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093696/A340-200_xmjcfv.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -498,7 +498,7 @@ export const aircraftData = [
             id: "a340-300",
             name: "A340-300",
             desc: "A stretched version of the A340-200 with greater passenger capacity, primarily used for long-haul flights.",
-            image: "/images/modelsImages/airbus/A340-300.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093694/A340-300_iqiym6.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -521,7 +521,7 @@ export const aircraftData = [
             id: "a340-500",
             name: "A340-500",
             desc: "The longest-range variant of the A340, designed for ultra-long-haul flights, but eventually phased out due to fuel inefficiency.",
-            image: "/images/modelsImages/airbus/A340-500.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093699/A340-500_kpjhu1.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -544,7 +544,7 @@ export const aircraftData = [
             id: "a340-600",
             name: "A340-600",
             desc: "A stretched version of the A340-300, offering larger capacity and capable of long-haul flights, but now being retired due to more efficient aircraft.",
-            image: "/images/modelsImages/airbus/A340-600.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093694/A340-600_sggfye.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -573,7 +573,7 @@ export const aircraftData = [
             id: "a350-900",
             name: "A350-900",
             desc: "A modern, wide-body twin-engine airliner designed for long-haul flights with improved fuel efficiency and passenger comfort.",
-            image: "/images/modelsImages/airbus/A350-900.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093699/A350-900_n8c8tu.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -596,7 +596,7 @@ export const aircraftData = [
             id: "a350-1000",
             name: "A350-1000",
             desc: "An extended version of the A350-900, offering increased passenger capacity and range for long-haul routes.",
-            image: "/images/modelsImages/airbus/A350-1000.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093699/A350-1000_trdo3y.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -619,7 +619,7 @@ export const aircraftData = [
             id: "a350f",
             name: "A350F",
             desc: "A freighter version of the A350, designed to carry cargo with the same efficiency as the A350 passenger models, currently under development.",
-            image: "/images/modelsImages/airbus/A350F.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093692/A350F_btu6ym.jpg",
             features: {
               "Type": "Wide-body (Freighter)",
               "Country of Origin": "France",
@@ -648,7 +648,7 @@ export const aircraftData = [
             id: "a380-800",
             name: "A380-800",
             desc: "The world’s largest commercial passenger airliner, offering four engines and huge passenger capacity for long-haul flights.",
-            image: "/images/modelsImages/airbus/A380-800.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093700/A380-800_saoefh.jpg",
             features: {
               "Type": "Wide-body",
               "Country of Origin": "France",
@@ -677,7 +677,7 @@ export const aircraftData = [
             id: "beluga",
             name: "A300-600ST (Beluga)",
             desc: "A cargo variant of the Airbus A300, known for its oversized cargo hold, used for transporting large and heavy parts.",
-            image: "/images/modelsImages/airbus/Beluga.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093700/Beluga_lusboo.jpg",
             features: {
               "Type": "Wide-body (Freighter)",
               "Country of Origin": "France",
@@ -700,7 +700,7 @@ export const aircraftData = [
             id: "belugaxl",
             name: "A330-700L (Beluga XL)",
             desc: "An upgraded version of the Beluga, based on the A330-200, used for transporting oversized cargo with increased capacity.",
-            image: "/images/modelsImages/airbus/BelugaXL.jpg",
+            image: "https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736093702/BelugaXL_egvuyc.jpg",
             features: {
               "Type": "Wide-body (Freighter)",
               "Country of Origin": "France",

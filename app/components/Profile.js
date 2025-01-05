@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Heart, LogOut } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import md5 from "md5";
 
 const Profile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,18 +38,13 @@ const Profile = () => {
       "#A78BFA",
       "#F472B6",
     ];
-    const charSum = fullName
-      .split("")
-      .reduce((sum, char) => sum + char.charCodeAt(0), 0);
-    return colors[charSum % colors.length];
+    const hash = md5(session.user.email);
+    const hashNumber = parseInt(hash.substring(0, 8), 16);
+    return colors[hashNumber % colors.length];
   };
 
   if (status === "loading") {
     return <div>Loading...</div>;
-  }
-
-  if (!session) {
-    return <div>Please log in to view your profile</div>;
   }
 
   const initials = getInitials(session.user.name);
