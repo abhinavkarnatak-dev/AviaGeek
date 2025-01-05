@@ -30,6 +30,7 @@ const Page = () => {
     }
   };
 
+  // Filter models based on the favorites
   useEffect(() => {
     const filterModels = () => {
       const models = [];
@@ -48,13 +49,17 @@ const Page = () => {
       setFilteredModels(models);
     };
 
-    if (favorites.length > 0) {
+    if (favorites.length >= 0) {
       filterModels();
     }
   }, [favorites]);
 
   useEffect(() => {
-    fetchFavorites();
+    if (session) {
+      fetchFavorites();
+      const intervalId = setInterval(fetchFavorites, 3000);
+      return () => clearInterval(intervalId);
+    }
   }, [session]);
 
   const handleRefresh = () => {
@@ -81,16 +86,7 @@ const Page = () => {
           My Favorite Models
         </h1>
 
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={handleRefresh}
-            className="bg-[#DCBB87] hover:bg-[#c5a876] text-[#19232D] text-sm lg:text-base font-bold px-4 py-2 rounded-md shadow-md"
-          >
-            Refresh
-          </button>
-        </div>
-
-        <div className="max-w-5xl mx-auto mt-6 p-4 space-y-4">
+        <div className="max-w-5xl mx-auto mt-6 pb-10 p-4 space-y-4">
           {filteredModels.length > 0 ? (
             filteredModels.map((model) => (
               <DropdownCard key={model.uniquenumber} model={model} />
@@ -122,34 +118,33 @@ const DropdownCard = ({ model }) => {
       {isOpen && (
         <div className="mt-4">
           <div className="p-6">
-          <div className="grid gap-6">
-            <Image
-              src={model.image}
-              alt={model.name}
-              width={300}
-              height={200}
-              className="rounded-lg object-cover"
-              priority={true}
-            />
-            <p className="text-white text-sm lg:text-base">{model.desc}</p>
-            <div className="flex justify-between items-center">
+            <div className="grid gap-6">
+              <Image
+                src={model.image}
+                alt={model.name}
+                width={300}
+                height={200}
+                className="rounded-lg object-cover"
+                priority={true}
+              />
+              <p className="text-white text-sm lg:text-base">{model.desc}</p>
+              <div className="flex justify-between items-center"></div>
+              <table className="w-full">
+                <tbody>
+                  {Object.entries(model.features).map(([key, value]) => (
+                    <tr key={key} className="border-b border-[#DCBB87]/20">
+                      <td className="py-2 text-[#DCBB87] font-semibold text-sm lg:text-base pr-8 lg:pr-0">
+                        {key}
+                      </td>
+                      <td className="py-2 text-white text-sm lg:text-base">
+                        {value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <table className="w-full">
-              <tbody>
-                {Object.entries(model.features).map(([key, value]) => (
-                  <tr key={key} className="border-b border-[#DCBB87]/20">
-                    <td className="py-2 text-[#DCBB87] font-semibold text-sm lg:text-base pr-8 lg:pr-0">
-                      {key}
-                    </td>
-                    <td className="py-2 text-white text-sm lg:text-base">
-                      {value}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
-        </div>
         </div>
       )}
     </div>
