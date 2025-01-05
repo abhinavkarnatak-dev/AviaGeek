@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply relative text-[#DCBB87] text-lg font-semibold;
+  }
+
+  .link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #dcbb87;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+    border-radius: 5px;
+  }
+
+  .link:hover::before {
+    width: 100%;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #19232d inset;
+    -webkit-text-fill-color: #fff;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  input:-webkit-autofill::placeholder {
+    color: #a1a1aa;
+  }
+
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #19232d inset;
+    -webkit-text-fill-color: #fff;
+  }
+}
