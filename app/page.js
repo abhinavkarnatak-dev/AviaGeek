@@ -160,7 +160,7 @@ const Page = () => {
 
           <img
             src="https://res.cloudinary.com/dn8lt4rqf/image/upload/v1736059386/front-image_kfx6gl.png"
-            className="absolute top-[5%] left-[33%] transform scale-0 animate-scale-once origin-center hidden md:block lg:block"
+            className="absolute top-[5%] left-[33%] transform scale-0 animate-scale-once origin-center hidden lg:block"
           />
         </div>
       </section>

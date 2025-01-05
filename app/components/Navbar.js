@@ -41,7 +41,7 @@ const Navbar = ({ hasBorder, isTransparent }) => {
         <div
           className={`${
             isOpen ? "fixed top-4 right-8 z-50" : "relative"
-          } md:hidden`}
+          } lg:hidden`}
         >
           <button onClick={toggleMenu} className="text-[#DCBB87] text-2xl">
             ☰
@@ -53,7 +53,7 @@ const Navbar = ({ hasBorder, isTransparent }) => {
             isOpen
               ? "fixed top-0 left-0 w-full h-auto bg-[#19232D] border-b-2 border-[#FFF] z-40 flex flex-col items-start lg:items-center p-8 space-y-6"
               : "hidden"
-          } md:flex md:space-x-8 md:static md:w-auto md:h-auto md:p-0 md:bg-transparent md:items-center`}
+          } lg:flex lg:space-x-8 lg:static lg:w-auto lg:h-auto lg:p-0 lg:bg-transparent lg:items-center`}
         >
           <li className="text-center">
             <Link href="/" className="font-semibold link">
