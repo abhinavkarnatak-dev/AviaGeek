@@ -30,7 +30,6 @@ const Page = () => {
     }
   };
 
-  // Filter models based on the favorites
   useEffect(() => {
     const filterModels = () => {
       const models = [];

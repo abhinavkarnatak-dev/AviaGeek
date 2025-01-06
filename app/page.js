@@ -211,12 +211,6 @@ const Page = () => {
               desc="A global leader in regional aircraft and aviation solutions."
               pageroute="manufacturers/Embraer"
             />
-            <ManufacturerCard
-              name="Mitsubishi-Logo"
-              title="Mitsubishi Aircraft Corporation"
-              desc="Leading innovator in advanced regional jet manufacturing."
-              pageroute="manufacturers/Mitsubishi"
-            />
           </div>
         </div>
       </section>
