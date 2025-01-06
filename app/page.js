@@ -66,8 +66,7 @@ const Page = () => {
               className="w-full lg:w-5/12 text-base lg:text-xl text-[#FFF] pl-12 lg:pl-0 pr-12 lg:pr-0 font-sm ml-0 lg:ml-24 mt-10 text-justify lg:text-start"
               style={{ textShadow: "3px 3px 10px black" }}
             >
-              AviaGeek is your ultimate destination for in-depth information on
-              a wide range of aircraft models.
+              AviaGeek is your ultimate destination for in-depth information on a wide range of commercial and cargo aircraft, business jets, and light general aviation aircraft.
             </p>
           </div>
           <div className="flex justify-center lg:justify-start">
