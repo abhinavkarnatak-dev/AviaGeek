@@ -192,7 +192,7 @@ export default function AircraftDetails() {
     <div key={family.id} className="ml-6 mb-4">
       <Button
         variant="ghost"
-        className="w-full justify-start"
+        className="w-full justify-start text-left"
         onClick={() => toggleFamily(family.id)}
       >
         {expandedFamily === family.id ? (
